@@ -60,6 +60,7 @@ import { ViewClubsComponent } from './pages/admin/view-club/view-club.component'
 import { ButtonDetailRendererComponent } from './pages/admin/button-detail-renderer/button-detail-renderer.component';
 import { ViewdetailformComponent } from './pages/admin/viewdetailform/viewdetailform.component';
 import { ButtonCellClubRendererComponent } from './pages/admin/button-cell-club-renderer/button-cell-club-renderer.component';
+import { CarouselComponent } from './pages/admin/carousel/carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,6 +99,7 @@ import { ButtonCellClubRendererComponent } from './pages/admin/button-cell-club-
     ButtonDetailRendererComponent,
     ViewdetailformComponent,
     ButtonCellClubRendererComponent,
+    CarouselComponent,
  
     
   ],

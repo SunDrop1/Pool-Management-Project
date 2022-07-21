@@ -1,16 +1,18 @@
-.example-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  #myGrid {
-    flex: 1 1 0px;
-    width: 100%;
-  }
-  
-  .button-group {
-    padding-bottom: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 13px;
-  }
+.welcome{
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 120px;
+}
+.infos{
+  text-align: center;
+  background-color: lightblue;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+ margin-top: 11%;
+ margin-left: -12px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: 12px;
+ font-weight: 300;
+ width: 1500px;
+}

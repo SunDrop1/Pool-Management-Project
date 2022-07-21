@@ -1,8 +1,6 @@
 import { Component, OnInit ,ViewChild } from '@angular/core';
-import { ColDef } from 'ag-grid-community';
-import { UserService } from 'src/app/services/user.service';
-import Swal from 'sweetalert2';
-import { ButtonCellRendererComponent } from '../button-cell-renderer/button-cell-renderer.component';
+
+
 
 
 @Component({
@@ -13,34 +11,36 @@ import { ButtonCellRendererComponent } from '../button-cell-renderer/button-cell
 export class WelcomeComponent implements OnInit {
 
 
-
-  columnDefs=[
-    {headerName:"id",field:"id", sortable:true,filter:true,},
-    {headerName:"first Name",field:"firstName" , sortable:true,filter:true},
-    {headerName:"last Name",field:"lastName", sortable:true,filter:true},
-    {headerName:"email",field:"email", sortable:true,filter:true},
-    {headerName:"username",field:"username", sortable:true,filter:true},
-    {headerName:"password",field:"password", sortable:true,filter:true},
-    {headerName:"enabled",field:"enabled", sortable:true,filter:true},
-    {headerName:"Action",field:"id",cellRenderer:ButtonCellRendererComponent},
-  ];
-    accounts=[
-      {
-        id: 0,
-        email:'',
-        enabled:true,
-        firstName: '',
-        lastName:'',
-        password: '',
-        username: 'string',
-      },
-      
-    ];
-
+  images=[
+    {
+      imageSrc:
+      'https://arryadia.snrt.ma/images/FRMN_LOGO_NATATION.jpg',
+      imageAlt:'image1',
+    },
+    {
+      imageSrc:
+      'https://pbs.twimg.com/media/B3j4GoqIUAAYjAP.jpg',
+      imageAlt:'image2',
+    },
+    {
+      imageSrc:
+      'https://arryadia.snrt.ma/images/Championnat_Maroc_natation_2018.jpg',
+      imageAlt:'image3',
+    },
+    {
+      imageSrc:
+      'https://arryadia.snrt.ma/images/Coupe_Trone_natation_2018.jpg',
+      imageAlt:'image4',
+    },
+    {
+      imageSrc:
+      'http://newsletter.cnom.org.ma/sites/default/files/jil%20natation.jpeg',
+      imageAlt:'image5',
+    },
     
-    frameworkComponents = {
-      btnCellRenderer: ButtonCellRendererComponent
-    };
+  ]
+    
+   
   constructor() { }
 
   ngOnInit(): void {
