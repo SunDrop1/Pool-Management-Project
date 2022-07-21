@@ -45,6 +45,7 @@ import { StartComponent } from './pages/user/start/start.component';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { RegisterComponent } from './pages/admin/register/register.component';
 import {  MatPaginatorModule } from '@angular/material/paginator';
+import {MatTabsModule} from '@angular/material/tabs';
 import { ViewAccountComponent } from './pages/admin/view-account/view-account.component';
 import { LookForAccountComponent } from './pages/admin/look-for-account/look-for-account.component';
 import { EditAccountComponent } from './pages/admin/edit-account/edit-account.component';
@@ -58,6 +59,7 @@ import { LookForClubComponent } from './pages/admin/look-for-club/look-for-club.
 import { ViewClubsComponent } from './pages/admin/view-club/view-club.component';
 import { ButtonDetailRendererComponent } from './pages/admin/button-detail-renderer/button-detail-renderer.component';
 import { ViewdetailformComponent } from './pages/admin/viewdetailform/viewdetailform.component';
+import { ButtonCellClubRendererComponent } from './pages/admin/button-cell-club-renderer/button-cell-club-renderer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,6 +97,7 @@ import { ViewdetailformComponent } from './pages/admin/viewdetailform/viewdetail
     ViewClubsComponent,
     ButtonDetailRendererComponent,
     ViewdetailformComponent,
+    ButtonCellClubRendererComponent,
  
     
   ],
@@ -120,6 +123,7 @@ import { ViewdetailformComponent } from './pages/admin/viewdetailform/viewdetail
     MatProgressSpinnerModule,
     AgGridModule,
     NgxUiLoaderModule,
+    MatTabsModule,
     NgxPaginationModule,
     NgxUiLoaderHttpModule.forRoot({
       showForeground: true,

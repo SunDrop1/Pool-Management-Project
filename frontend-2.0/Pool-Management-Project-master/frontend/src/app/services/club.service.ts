@@ -11,7 +11,7 @@ export class ClubService {
 
   //create club
   createClub(club:any){
-    return this._htpp.post(`${baseUrl}/`,club);
+    return this._htpp.post(`${baseUrl}/club/`,club);
   }
 
   //get all clubs
