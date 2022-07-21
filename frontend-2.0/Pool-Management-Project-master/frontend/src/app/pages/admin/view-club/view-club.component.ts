@@ -14,12 +14,12 @@ export class ViewClubsComponent implements OnInit {
     {
       id:0,
       name:'',
-      summerClub:false,
+      summer_club:false,
       sportive:false,
       synchro:false,
-      waterPolo:false,
+      water_polo:false,
       plongeon:false,
-      eauLibre:false,
+      eau_libre:false,
     },
     
   ];

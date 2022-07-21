@@ -8,7 +8,7 @@
                
                         <mat-form-field appearance="fill" class="mt20 w100 countries">
                             <mat-label >Countries</mat-label>
-                            <mat-select  name="category" class="country" [(ngModel)]="club.pays" >
+                            <mat-select  name="category" class="country" [(ngModel)]="club.countries" >
                               <mat-option *ngFor="let c  of countries" [value]="c.name" >
                                     {{c.name}}
                               </mat-option>
@@ -16,7 +16,7 @@
                           </mat-form-field>
                           <mat-form-field class="w100 region" appearance="fill" >
                             <mat-label>Inter Region</mat-label>
-                            <input required  [(ngModel)]="club.interRegion" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                            <input required  [(ngModel)]="club.inter_region" type="text" name="title"  placeholder="Enter here" matInput id=""/>
                         </mat-form-field>
                         <br>
                         <mat-form-field class="w100 region1" appearance="fill">
@@ -31,7 +31,7 @@
                         <br>
                           <mat-form-field class="w100 code" appearance="fill">
                             <mat-label>Club's code</mat-label>
-                            <input required  [(ngModel)]="club.id" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                            <input required  [(ngModel)]="club.code" type="text" name="title"  placeholder="Enter here" matInput id=""/>
                         </mat-form-field>
                         <mat-form-field class="w100 name" appearance="fill">
                             <mat-label>Club's name</mat-label>
@@ -52,7 +52,7 @@
                 <mat-tab label="Type/Activities" > <mat-slide-toggle 
                     #checkboxes
                     name="isSummerClub"
-                    [(ngModel)]="club .summerClub"
+                    [(ngModel)]="club .summer_club"
                     color="admin-color"
                     class=" container1"
                     [checked]="false"
@@ -90,7 +90,7 @@
                 <mat-slide-toggle
                 #checkboxes
                 name="water_polo"
-                [(ngModel)]="club .waterPolo"
+                [(ngModel)]="club .water_polo"
                 color="admin-color"
                 class=" container1"
                 [checked]="false"
@@ -114,7 +114,7 @@
             <mat-slide-toggle
             #checkboxes
             name="eau_libre"
-            [(ngModel)]="club .eauLibre"
+            [(ngModel)]="club .eau_libre"
             color="admin-color"
             class=" container1"
             [checked]="false"
@@ -134,7 +134,7 @@
                 </mat-form-field>
                 <mat-form-field class="w100 name" appearance="fill">
                     <mat-label>Supplement Adress</mat-label>
-                    <input required  [(ngModel)]="club.supplementAdresse" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    <input required  [(ngModel)]="club.supplement_adresse" type="text" name="title"  placeholder="Enter here" matInput id=""/>
                 </mat-form-field>
                 <mat-form-field class="w100 region1" appearance="fill">
                     <mat-label>ZIP <code></code></mat-label>
@@ -146,7 +146,7 @@
                 </mat-form-field>
                 <mat-form-field class="w100 code" appearance="fill">
                     <mat-label>Telephone</mat-label>
-                    <input required  [(ngModel)]="club.tel" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    <input required  [(ngModel)]="club.telephone" type="text" name="title"  placeholder="Enter here" matInput id=""/>
                 </mat-form-field>
                 <mat-form-field class="w100 name" appearance="fill">
                     <mat-label>Fax</mat-label>
