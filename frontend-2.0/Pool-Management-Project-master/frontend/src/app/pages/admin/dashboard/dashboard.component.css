@@ -1,0 +1,16 @@
+.container-profile {
+    width: 640px; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.fixing-container{
+    float: left;
+    margin: 20px;
+}
+
+.div#second {
+    margin-left: 50%;
+  }

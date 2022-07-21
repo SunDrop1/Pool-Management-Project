@@ -1,0 +1,9 @@
+.example-spacer{
+    flex: 1 1 auto;
+}
+.admin-color{
+     background-color: #89CFF0;
+}
+.logo{
+   width: 200px;
+}

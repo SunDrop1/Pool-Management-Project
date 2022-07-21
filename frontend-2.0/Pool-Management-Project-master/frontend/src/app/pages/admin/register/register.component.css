@@ -1,0 +1,67 @@
+
+.full-width{
+	width: 100%;
+}
+.body{
+  
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url("../../natation.png.png");
+    background-color: #cccccc; */
+
+    /* background-image: url("../../natation.png.png"); */
+    height: 715 px;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2cm gray;
+
+} 
+ 
+mat-card {
+    width: 40%;
+    margin: 1% auto;
+    border-radius: 8px;
+   background-color: whitesmoke;
+  }
+  mat-form-field, mat-checkbox {
+    width: 80%;
+    display: block;
+    margin: auto;
+    
+  }
+  mat-card-content {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    background-color: blueviolet;
+  }
+  .text-center{
+      text-align: center;
+      color: black;
+  }
+  #Register:hover, #clear:hover{
+    background-color: rgb(43, 141, 226);
+  }
+  .label{
+    color: gray;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+      opacity: 1;
+}
+.logo{
+  size-adjust:60% ;
+}
+.input{
+  color: black;
+}
