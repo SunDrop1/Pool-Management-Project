@@ -30,6 +30,7 @@ import { ViewClubsComponent } from './admin/view-club/view-club.component';
 import { LookForClubComponent } from './admin/look-for-club/look-for-club.component';
 import { EditClubComponent } from './admin/edit-club/edit-club.component';
 import { EditClubFormComponent } from './admin/edit-club-form/edit-club-form.component';
+import { ViewdetailformComponent } from './admin/viewdetailform/viewdetailform.component';
 
 const routes: Routes = [
  {
@@ -88,16 +89,16 @@ const routes: Routes = [
          component:LookForClubComponent,
         },
         {
-         path:'ClubDetails',
-         component:ViewAccountComponent,
-        },
-        {
          path:'editClub',
          component:EditClubComponent,
         },
         {
          path:'editClubForm/:id',
          component:EditClubFormComponent,
+        },
+        {
+         path:'ClubDetails/:id',
+         component:ViewdetailformComponent,
         },
       
       
