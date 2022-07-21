@@ -32,6 +32,6 @@ export class ClubService {
   
   //delete club
   deleteClub(id:any){
-    return this._htpp.delete(`${baseUrl}/${id}`);
+    return this._htpp.delete(`${baseUrl}/club/${id}`);
   }
 }
