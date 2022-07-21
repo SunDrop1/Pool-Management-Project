@@ -14,27 +14,27 @@ export class ViewdetailformComponent implements OnInit {
 
   countries: any = (countriesData as any).default;
   public club={
-   pays:'',
-   interRegion:'',
-   region:'',
-   departement:'',
-   id:null,
-   name:'',
-   email:'',
-   summerClub:false,
-   sportive:false,
-   synchro:false,
-   waterPolo:false,
-   plongeon:false,
-   eauLibre:false,
-   adresse:'',
-   supplementAdresse:'',
-   zip:'',
-   local:'',
-   tel:'',
-   fax:'',
-   
-  };
+    countries:'',
+    inter_region:'',
+    region:'',
+    departement:'',
+    code:'',
+    name:'',
+    email:'',
+    summer_club:false,
+    sportive:false,
+    synchro:false,
+    water_polo:false,
+    plongeon:false,
+    eau_libre:false,
+    adresse:'',
+    supplement_adresse:'',
+    zip:'',
+    local:'',
+    telephone:'',
+    fax:'',
+    
+   };
   id:any
 
 

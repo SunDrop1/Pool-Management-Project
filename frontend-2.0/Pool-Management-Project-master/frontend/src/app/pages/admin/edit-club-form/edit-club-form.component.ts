@@ -13,27 +13,27 @@ export class EditClubFormComponent implements OnInit {
 
   countries: any = (countriesData as any).default;
   public club={
-   pays:'',
-   interRegion:'',
-   region:'',
-   departement:'',
-   id:null,
-   name:'',
-   email:'',
-   summerClub:false,
-   sportive:false,
-   synchro:false,
-   waterPolo:false,
-   plongeon:false,
-   eauLibre:false,
-   adresse:'',
-   supplementAdresse:'',
-   zip:'',
-   local:'',
-   tel:'',
-   fax:'',
-   
-  };
+    countries:'',
+    inter_region:'',
+    region:'',
+    departement:'',
+    code:'',
+    name:'',
+    email:'',
+    summer_club:false,
+    sportive:false,
+    synchro:false,
+    water_polo:false,
+    plongeon:false,
+    eau_libre:false,
+    adresse:'',
+    supplement_adresse:'',
+    zip:'',
+    local:'',
+    telephone:'',
+    fax:'',
+    
+   };
   id:any
 
  constructor(private _club:ClubService, private _snack:MatSnackBar, private _router:Router, private _route:ActivatedRoute) { }
@@ -58,32 +58,30 @@ export class EditClubFormComponent implements OnInit {
    
    }
    clear1(){
-     this.club.pays='';
-     this.club.interRegion='';
-     this.club.region='';
-     this.club.departement='';
-     this.club.id=null;
-     this.club.name='';
-     this.club.email='';
-
-
+    this.club.countries='';
+    this.club.inter_region='';
+    this.club.region='';
+    this.club.departement='';
+    this.club.code='';
+    this.club.name='';
+    this.club.email='';
    }
    clear2(){
-  this.club.summerClub=false;
-  this.club.sportive=false;
-  this.club.synchro=false;
-  this.club.waterPolo=false;
-  this.club.plongeon=false;
-  this.club.eauLibre=false;
+    this.club.summer_club=false;
+    this.club.sportive=false;
+    this.club.synchro=false;
+    this.club.water_polo=false;
+    this.club.plongeon=false;
+    this.club.eau_libre=false;
    
    }
    clear3(){  
-     this.club.adresse="";
-     this.club.supplementAdresse='';
-     this.club.zip='';
-     this.club.local='';
-     this.club.tel='';
-     this.club.fax='';
+    this.club.adresse="";
+    this.club.supplement_adresse='';
+    this.club.zip='';
+    this.club.local='';
+    this.club.telephone='';
+    this.club.fax='';
    }
    formSubmit(){
     this._club.updateClub(this.club).subscribe(

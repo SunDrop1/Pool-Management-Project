@@ -15,24 +15,24 @@ export class EditClubComponent implements OnInit {
   columnDefs=[
     {headerName:"id",field:"id", sortable:true,filter:true},
     {headerName:"Club's name",field:"name" , sortable:true,filter:true},
-    {headerName:"Summer club",field:"summerClub", sortable:true,filter:true},
+    {headerName:"Summer club",field:"summer_club", sortable:true,filter:true},
     {headerName:"Sportive",field:"sportive", sortable:true,filter:true},
     {headerName:"Synchro",field:"synchro", sortable:true,filter:true},
-    {headerName:"Water-polo",field:"waterPolo", sortable:true,filter:true},
+    {headerName:"Water-polo",field:"water_polo", sortable:true,filter:true},
     {headerName:"Plongeon",field:"plongeon", sortable:true,filter:true},
-    {headerName:"Eau Libre",field:"eauLibre", sortable:true,filter:true},
+    {headerName:"Eau Libre",field:"eau_libre", sortable:true,filter:true},
     {headerName:"Action",field:"id",cellRenderer:ButtonCellClubRendererComponent},
   ];
   clubs=[
     {
       id:0,
       name:'',
-      summerClub:false,
+      summer_club:false,
       sportive:false,
       synchro:false,
-      waterPolo:false,
+      water_polo:false,
       plongeon:false,
-      eauLibre:false,
+      eau_libre:false,
     },
     
   ];
