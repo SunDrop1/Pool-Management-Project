@@ -1,4 +1,7 @@
 .sidebar{
-    background-color: lightslategrey;
-    padding-bottom: 110%;
-  }
+  background-color: lightslategrey;
+  padding-bottom: 108%;
+  position: relative;
+  left: -45px;
+  top:-20px;
+}

@@ -20,28 +20,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { AuthInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
-import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import {MatTableModule} from '@angular/material/table';
-import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
-import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
-import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
-import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
-import { ViewQuizQuestionsComponent } from './pages/admin/view-quiz-questions/view-quiz-questions.component';
-import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
-import { PrequizComponent } from './pages/user/prequiz/prequiz.component';
-import { InstructionsComponent } from './pages/user/instructions/instructions.component';
-import { StartComponent } from './pages/user/start/start.component';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
 import { RegisterComponent } from './pages/admin/register/register.component';
 import {  MatPaginatorModule } from '@angular/material/paginator';
@@ -61,6 +49,12 @@ import { ButtonDetailRendererComponent } from './pages/admin/button-detail-rende
 import { ViewdetailformComponent } from './pages/admin/viewdetailform/viewdetailform.component';
 import { ButtonCellClubRendererComponent } from './pages/admin/button-cell-club-renderer/button-cell-club-renderer.component';
 import { CarouselComponent } from './pages/admin/carousel/carousel.component';
+import { AddNageurComponent } from './pages/admin/add-nageur/add-nageur.component';
+import { EditNageurFormComponent } from './pages/admin/edit-nageur-form/edit-nageur-form.component';
+import { EditNageurComponent } from './pages/admin/edit-nageur/edit-nageur.component';
+import { FilterNageurComponent } from './pages/admin/filter-nageur/filter-nageur.component';
+import { NageurDetailFormComponent } from './pages/admin/nageur-detail-form/nageur-detail-form.component';
+import { ViewNageurComponent } from './pages/admin/view-nageur/view-nageur.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,21 +63,9 @@ import { CarouselComponent } from './pages/admin/carousel/carousel.component';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    UserDashboardComponent,
     ProfileComponent,
     SidebarComponent,
     WelcomeComponent,
-    ViewCategoriesComponent,
-    AddCategoryComponent,
-    ViewQuizzesComponent,
-    AddQuizComponent,
-    UpdateQuizComponent,
-    ViewQuizQuestionsComponent,
-    AddQuestionComponent,
-    LoadQuizComponent,
-    PrequizComponent,
-    InstructionsComponent,
-    StartComponent,
     RegisterComponent,
     ViewAccountComponent,
     LookForAccountComponent,
@@ -100,6 +82,12 @@ import { CarouselComponent } from './pages/admin/carousel/carousel.component';
     ViewdetailformComponent,
     ButtonCellClubRendererComponent,
     CarouselComponent,
+    AddNageurComponent,
+    EditNageurFormComponent,
+    EditNageurComponent,
+    FilterNageurComponent,
+    NageurDetailFormComponent,
+    ViewNageurComponent,
  
     
   ],
