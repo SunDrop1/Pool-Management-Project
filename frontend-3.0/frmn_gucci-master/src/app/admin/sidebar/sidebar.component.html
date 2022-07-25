@@ -1,0 +1,81 @@
+<mat-card class="sidebar">
+	<mat-action-list>
+		<div mat-subheader>Menu</div>
+		<button  routerLink="/admin/home" (click)="test=0;" mat-list-item><mat-icon mat-list-icon>home</mat-icon>Home</button>
+		<button *ngIf="test==0" mat-list-item routerLink="/admin/profile">
+			<mat-icon mat-list-icon>account_circle</mat-icon>
+			Profile
+		</button>
+		<button *ngIf="test==0" (click)="test=1;" mat-list-item routerLink="/admin/categories" routerLink="/admin/register">
+			<mat-icon mat-list-icon>list</mat-icon>
+			Accounts
+		</button>
+		<button *ngIf="test==0" (click)="test=3;" mat-list-item routerLink="/admin/quizzes">
+			<mat-icon mat-list-icon>pool</mat-icon>
+			Competitors
+		</button>
+		<button *ngIf="test==0" mat-list-item routerLink="/admin/add-quiz">
+			<mat-icon mat-list-icon>support_agent</mat-icon>
+			Trainers
+		</button>
+        <button *ngIf="test==0" (click)="test=2;" mat-list-item routerLink="/admin/add-quiz">
+			<mat-icon mat-list-icon>sports</mat-icon>
+			Clubs
+		</button>
+       
+		<button *ngIf="test==0" mat-list-item routerLink="/admin/profile">
+			<mat-icon mat-list-icon>logout</mat-icon>
+			Logout
+		</button>
+		<button *ngIf="test==1" mat-list-item routerLink="/admin/ViewAccount">
+			<mat-icon mat-list-icon>account_circle</mat-icon>
+			View Accounts
+		</button>
+		<button *ngIf="test==1" mat-list-item  routerLink="/admin/register">
+			<mat-icon mat-list-icon>add_circle</mat-icon>
+			Add Accounts
+		</button>
+		<button *ngIf="test==1" mat-list-item routerLink="/admin/filterAccount">
+			<mat-icon mat-list-icon>filter_alt</mat-icon>
+			Look for Account
+		</button>
+        <button *ngIf="test==1" mat-list-item routerLink="/admin/editAccount">
+			<mat-icon mat-list-icon>edit</mat-icon>
+			Edit Accounts
+		</button>
+		
+		<button *ngIf="test==2" mat-list-item routerLink="/admin/viewClub">
+			<mat-icon mat-list-icon>account_circle</mat-icon>
+			View Club
+		</button>
+		<button *ngIf="test==2" mat-list-item  routerLink="/admin/addClub">
+			<mat-icon mat-list-icon>add_circle</mat-icon>
+			Add Club
+		</button>
+		<button *ngIf="test==2" mat-list-item routerLink="/admin/filterClub">
+			<mat-icon mat-list-icon>filter_alt</mat-icon>
+			Look for Club
+		</button>
+        <button *ngIf="test==2" mat-list-item routerLink="/admin/editClub">
+			<mat-icon mat-list-icon>edit</mat-icon>
+			Edit Club
+		</button>
+
+		<button *ngIf="test==3" mat-list-item routerLink="/admin/viewCompetitor">
+			<mat-icon mat-list-icon>account_circle</mat-icon>
+			View competitors
+		</button>
+		<button *ngIf="test==3" mat-list-item  routerLink="/admin/addCompetitor">
+			<mat-icon mat-list-icon>add_circle</mat-icon>
+			Add competitor
+		</button>
+		<button *ngIf="test==3" mat-list-item routerLink="/admin/filterCompetitor">
+			<mat-icon mat-list-icon>filter_alt</mat-icon>
+			Look for competitor
+		</button>
+        <button *ngIf="test==3" mat-list-item routerLink="/admin/editCompetitor">
+			<mat-icon mat-list-icon>edit</mat-icon>
+			Edit competitor
+		</button>
+	</mat-action-list>
+  </mat-card>

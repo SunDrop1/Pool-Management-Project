@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    </head>
+    <body>
+        <div class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Club's name</th>
+                        <th>SummerClub</th>
+                        <th>Sp</th>
+                        <th>Sy</th>
+                        <th>WP</th>
+                        <th>Plg</th>
+                        <th>EL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let club of clubs | paginate:{itemsPerPage:10, currentPage: p}">
+                    <td><span>{{club.id}}</span></td>
+                    <td><span>{{club.name}}</span></td>
+                    <td><mat-slide-toggle 
+                        #checkboxes
+                        name="isSummerClub"
+                        [(ngModel)]="club .summer_club"
+                        color="admin-color"
+                        class=" container1"
+                        [checked]="club .summer_club"
+                        type="checkbox"  
+                        disabled
+                       >
+                       
+                    </mat-slide-toggle></td>
+                    <!-- <td><span>{{club.summer_club}}</span></td> -->
+                    <td><mat-slide-toggle 
+                        #checkboxes
+                        name="isSummerClub"
+                        [(ngModel)]="club .sportive"
+                        color="admin-color"
+                        class=" container1"
+                        [checked]="club .sportive"
+                        type="checkbox"  disabled
+                       >
+                       
+                    </mat-slide-toggle></td>
+                    <td><mat-slide-toggle 
+                        #checkboxes
+                        name="isSummerClub"
+                        [(ngModel)]="club .synchro"
+                        color="admin-color"
+                        class=" container1"
+                        [checked]="club .synchro"
+                        type="checkbox"  disabled
+                       >
+                       
+                    </mat-slide-toggle></td>
+                    <td><mat-slide-toggle 
+                        #checkboxes
+                        name="isSummerClub"
+                        [(ngModel)]="club .water_polo"
+                        color="admin-color"
+                        class=" container1"
+                        [checked]="club .water_polo"
+                        type="checkbox"  disabled
+                       >
+                       
+                    </mat-slide-toggle></td>
+                    <td><mat-slide-toggle 
+                        #checkboxes
+                        name="isSummerClub"
+                        [(ngModel)]="club .plongeon"
+                        color="admin-color"
+                        class=" container1"
+                        [checked]="club .plongeon"
+                        type="checkbox"  disabled
+                       >
+                       
+                    </mat-slide-toggle></td>
+                    <td><mat-slide-toggle 
+                        #checkboxes
+                        name="isSummerClub"
+                        [(ngModel)]="club .eau_libre"
+                        color="admin-color"
+                        class=" container1"
+                        [checked]="club .eau_libre"
+                        type="checkbox"  disabled
+                       >
+                       
+                    </mat-slide-toggle></td>
+                    </tr>
+                </tbody>
+            </table>
+          
+            <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

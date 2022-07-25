@@ -11,6 +11,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -27,12 +28,44 @@ public class Nageur {
 	private String prenom;
 	private String sexe;
 	@Temporal(value=TemporalType.DATE)
+    @JsonFormat(pattern="MM-dd-yyyy")
 	private Date dateNaissance;
 	private String nationalite;
 	private String civilite;
 	private String lieu_de_naissance;
 	private String responsable;
 	private String adresse;
+	private String supplement_adresse;
+	private String zip;
+	private String localite;
+	private String telephone;
+	private String fax;
+	private String federation;
+	private String club;
+	@Temporal(value=TemporalType.DATE)
+    @JsonFormat(pattern="MM-dd-yyyy")
+	private Date obliteration;
+	private String licence;
+	private String type_licence1;
+	private String type_licence2;
+	private String type_licence3;
+	@Temporal(value=TemporalType.DATE)
+    @JsonFormat(pattern="MM-dd-yyyy")
+	private Date depot;
+	private boolean sportive=false;
+	private boolean synchro=false;
+	private boolean water_polo=false;
+	private boolean plongeon=false;
+	private boolean dirigeant=false;
+	private boolean maitre=false;
+	private boolean eau_libre=false;
+	private String medecin;
+	@Temporal(value=TemporalType.DATE)
+    @JsonFormat(pattern="MM-dd-yyyy")
+	private Date derniere_visite;
+	private String observation;	
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -297,33 +330,6 @@ public class Nageur {
 		this.observation = observation;
 	}
 
-	private String supplement_adresse;
-	private String zip;
-	private String localite;
-	private String telephone;
-	private String fax;
-	private String federation;
-	private String club;
-	@Temporal(value=TemporalType.DATE)
-	private Date obliteration;
-	private String licence;
-	private String type_licence1;
-	private String type_licence2;
-	private String type_licence3;
-	@Temporal(value=TemporalType.DATE)
-	private Date depot;
-	private boolean sportive=false;
-	private boolean synchro=false;
-	private boolean water_polo=false;
-	private boolean plongeon=false;
-	private boolean dirigeant=false;
-	private boolean maitre=false;
-	private boolean eau_libre=false;
-	private String medecin;
-	@Temporal(value=TemporalType.DATE)
-	private Date derniere_visite;
-	private String observation;	
-	
 	public Nageur() {}
 
 	public Nageur(String nom, String prenom, String sexe, Date date_naissance, String nationalite, String civilite,

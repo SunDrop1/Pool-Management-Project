@@ -1,0 +1,57 @@
+.container{
+    background-color: #AAC9DD;
+    color: black;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 60px;
+    
+}
+.countries{
+    color: white;
+    margin-left: 12%;
+    width: 300px;
+}
+.region{
+    margin: 50px;
+    width: 300px;
+    margin-left:10%;
+}
+.dep{
+    margin-left: 10%;
+    width: 300px;
+}
+.code{
+    margin: 50px;
+    margin-left: 12%;
+    width: 300px;
+}
+.name{
+    margin-left: 5%;
+    width: 300px;
+}
+.email{
+    margin-left: 12%;
+    width: 300px;
+}
+.region1{
+    margin-left: 12%;
+    width: 300px;
+}
+.add{
+    margin-left: 10%;
+    margin-right: 15px;
+}
+.clear{
+    background-color: rgb(237, 89, 89);
+}
+.container1{
+    padding-top: 20px;
+    margin-left: 15px;
+}
+.clear1{
+    margin-left: 15%;
+}
+.clear2{
+    margin-left: 77%;
+}
+

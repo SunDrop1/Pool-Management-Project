@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    </head>
+    <body>
+        <div class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Enabled</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let account of accounts | paginate:{itemsPerPage:10, currentPage: p}">
+                    <td><span>{{account.id}}</span></td>
+                    <td><span>{{account.email}}</span></td>
+                    <td><span>{{account.firstName}}</span></td>
+                    <td><span>{{account.lastName}}</span></td>
+                    <td><span>{{account.username}}</span></td>
+                    <td><span>{{account.password}}</span></td>
+                    <td><span>{{account.enabled}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+          
+            <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+<!-- <div class="container mat-elevation-z8 data-table">
+    <mat-table class="table table-bordered table-striped">
+     
+        <ng-container matColumnDef="id">
+        <mat-header-cell>ID
+        <mat-cell *matCellDef="let account">{{account.id}}</mat-cell>
+        </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <mat-header-cell >Email
+            <mat-cell *matCellDef="let account">{{account.email}}</mat-cell>
+            </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="firstName">
+            <mat-header-cell >First name
+            <mat-cell *matCellDef="let account">{{account.firstName}}</mat-cell>
+            </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+            <mat-header-cell >Last Name
+            <mat-cell *matCellDef="let account">{{account.lastName}}</mat-cell>
+            </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="username">
+            <mat-header-cell >Username
+            <mat-cell *matCellDef="let account">{{account.username}}</mat-cell>
+            </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="password">
+            <mat-header-cell >Password
+            <mat-cell *matCellDef="let account">{{account.password}}</mat-cell>
+            </mat-header-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="enabled">
+            <mat-header-cell >Enabled
+            <mat-cell *matCellDef="let account">{{account.enabled}}</mat-cell>
+            </mat-header-cell>
+        </ng-container>
+
+       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let account; columns:displayedColumns;">
+        </mat-row> 
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div> -->

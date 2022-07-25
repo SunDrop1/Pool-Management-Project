@@ -1,0 +1,45 @@
+<div class="login-page">
+    <mat-card> 
+        <div class="container text-center">
+
+            <img src="../assets/logo.png"  class="logo" alt="">
+        </div>
+       
+   <h1 class="text-center">Login here !!</h1>
+
+       <form   (ngSubmit)="formSubmit()">
+        
+           <mat-form-field class="full-width" appearance="outline">
+               <mat-label class="labelemail">User email</mat-label>
+               <input class="emailinput"
+               [(ngModel)]="loginData.username"
+               name="email"
+               required
+               matInput placeholder="Email"
+              
+               />
+          
+             </mat-form-field>
+
+          
+           <mat-form-field class="full-width" appearance="outline">
+               <mat-label class="labelpassword">Password</mat-label>
+               <input class="pwdinput"
+                [(ngModel)]="loginData.password"
+                name="password"cd
+                required
+                type="Password" 
+                matInput placeholder="Password"/>
+             </mat-form-field>
+
+
+            
+             <div class="container text-center">
+                   <button type="submit" mat-raised-button class="sign-up-button admin-color" id="login">Login</button>
+                    <button  style="margin-left: 20px;" class="admin-color1" id="reset" mat-raised-button (click)="Toogle()">Reset</button>
+             </div>
+       </form>
+
+</mat-card>
+</div>
+{{loginData | json}}

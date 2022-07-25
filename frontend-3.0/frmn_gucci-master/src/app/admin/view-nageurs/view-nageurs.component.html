@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+    </head>
+    <body>
+        <div class="table table-bordered table-striped">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>First name</th>
+                        <th>Last Name</th>
+                        <th>Sexe</th>
+                        <th>Licence</th>
+                        <th>Deposite</th>
+                        <th>Federation</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let nageur of nageurs | paginate:{itemsPerPage:10, currentPage: p}">
+                    <td><span>{{nageur.id}}</span></td>
+                    <td><span>{{nageur.nom}}</span></td>
+                    <td><span>{{nageur.prenom}}</span></td>
+                    <td><span>{{nageur.sexe}}</span></td>
+                    <td><span>{{nageur.licence}}</span></td>
+                    <td><span>{{nageur.depot}}</span></td>
+                    <td><span>{{nageur.federation}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+          
+            <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator> -->
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

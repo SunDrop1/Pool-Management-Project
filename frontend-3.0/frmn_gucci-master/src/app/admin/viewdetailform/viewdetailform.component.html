@@ -1,0 +1,169 @@
+<mat-card class="container">
+    <h1>Add New Club</h1>
+    <div class="row">
+        <mat-tab-group>
+            <mat-tab label="Club infos"> 
+                <div class="col-md-10 offset-md-1">
+           
+                    <mat-form-field appearance="fill" class="mt20 w100 countries">
+                        <mat-label >Countries</mat-label>
+                        <mat-select  name="category" class="country" disabled [(ngModel)]="club.countries">
+                          <mat-option *ngFor="let c  of countries" [value]="c.name" disabled>
+                                {{c.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <mat-form-field class="w100 region" appearance="fill" >
+                        <mat-label>Inter Region</mat-label>
+                        <input required  [(ngModel)]="club.inter_region" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Region</mat-label>
+                        <input required  [(ngModel)]="club.region" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 dep" appearance="fill">
+                        <mat-label>Departement</mat-label>
+                        <input required  [(ngModel)]="club.departement" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+                    </mat-form-field>
+                    <br>
+                      <mat-form-field class="w100 code" appearance="fill">
+                        <mat-label>Club's code</mat-label>
+                        <input required  [(ngModel)]="club.code" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 name" appearance="fill">
+                        <mat-label>Club's name</mat-label>
+                        <input required  [(ngModel)]="club.name" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 email" appearance="fill">
+                        <mat-label>email</mat-label>
+                        <input required  [(ngModel)]="club.email" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+                    </mat-form-field>
+                   
+                        <button mat-raised-button class="add" routerLink="/admin/filterClub">Close</button>
+                       
+                    
+                    
+                </div>     
+            </mat-tab>
+
+            <mat-tab label="Type/Activities" > <mat-slide-toggle 
+                #checkboxes
+                name="isSummerClub"
+                [(ngModel)]="club .summer_club"
+                color="admin-color"
+                class=" container1"
+                [checked]="false"
+                type="checkbox"
+                id="1"
+                disabled
+               >
+               Summer club
+            </mat-slide-toggle>
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+                name="sportive"
+                [(ngModel)]="club .sportive"
+                color="admin-color"
+                class=" container1"
+                [checked]="false"
+                type="checkbox"
+                disabled
+               >
+               Sportive
+            </mat-slide-toggle>
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+                name="synchro"
+                [(ngModel)]="club .synchro"
+                color="admin-color"
+                class=" container1"
+                [checked]="false"
+                type="checkbox"
+                disabled
+               >
+               Synchro
+            </mat-slide-toggle>
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+            name="water_polo"
+            [(ngModel)]="club .water_polo"
+            color="admin-color"
+            class=" container1"
+            [checked]="false"
+            type="checkbox"
+            disabled
+           >
+           Water Polo
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle
+        #checkboxes
+        name="plongeon"
+        [(ngModel)]="club .plongeon"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        disabled
+        >
+        Plongeon
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle
+        #checkboxes
+        name="eau_libre"
+        [(ngModel)]="club .eau_libre"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        disabled
+        >
+        Eau Libre
+        </mat-slide-toggle>
+       
+        <button mat-raised-button class="clear clear1" routerLink="/admin/filterClub">Close</button>
+    </mat-tab>
+            <mat-tab label="Contact Information">
+                <div class="col-md-10 offset-md-1 c1" >
+                <mat-form-field class="w100 code"  appearance="fill">
+                
+                <mat-label>Adress</mat-label>
+                <input required  [(ngModel)]="club.adresse" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+            </mat-form-field>
+            <mat-form-field class="w100 name" appearance="fill">
+                <mat-label>Supplement Adress</mat-label>
+                <input required  [(ngModel)]="club.supplement_adresse" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+            </mat-form-field>
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>ZIP <code></code></mat-label>
+                <input required  [(ngModel)]="club.zip" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+            </mat-form-field>
+            <mat-form-field class="w100 dep" appearance="fill">
+                <mat-label>Local</mat-label>
+                <input required  [(ngModel)]="club.local" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+            </mat-form-field>
+            <mat-form-field class="w100 code" appearance="fill">
+                <mat-label>Telephone</mat-label>
+                <input required  [(ngModel)]="club.telephone" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+            </mat-form-field>
+            <mat-form-field class="w100 name" appearance="fill">
+                <mat-label>Fax</mat-label>
+                <input required  [(ngModel)]="club.fax" type="text" name="title"  placeholder="Enter here" matInput id="" disabled/>
+            </mat-form-field>
+            
+            <button mat-raised-button class="clear clear2" routerLink="/admin/filterClub">Close</button>
+        </div>
+        </mat-tab>
+          </mat-tab-group>
+         
+
+    <br>
+    </div>
+</mat-card>
+

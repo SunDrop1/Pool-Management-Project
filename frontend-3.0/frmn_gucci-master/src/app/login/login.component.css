@@ -1,0 +1,61 @@
+.login-page {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #89CFF0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url("../natation.png.png");
+    background-color: #cccccc;
+    
+  }
+  
+  mat-card {
+    width: 30%;
+    margin: 10% auto;
+    border-radius: 8px;
+   background-color: whitesmoke;
+  }
+  mat-form-field, mat-checkbox {
+    width: 80%;
+    display: block;
+    margin: auto;
+    
+  }
+  mat-card-content {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+    background-color: blueviolet;
+  }
+  .text-center{
+      text-align: center;
+      color: black;
+  }
+  #login:hover, #reset:hover{
+    background-color: rgb(43, 141, 226);
+  }
+  .labelemail,.labelpassword{
+    color: gray;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+      opacity: 1;
+}
+.logo{
+  size-adjust:60% ;
+}
+.emailinput,.pwdinput{
+  color: black;
+}

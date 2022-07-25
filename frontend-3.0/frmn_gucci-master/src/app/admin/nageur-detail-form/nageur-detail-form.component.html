@@ -1,0 +1,286 @@
+<mat-card class="container">
+    <h1>View Competitor's details</h1>
+    <div class="row">
+        <mat-tab-group>
+            <mat-tab label="Nageur"> 
+                <div class="col-md-10 offset-md-1">
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Nom</mat-label>
+                        <input required  [(ngModel)]="nageur.nom" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Prenom</mat-label>
+                        <input required  [(ngModel)]="nageur.prenom" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="mt20 w100 countries">
+                        <mat-label >Sexe</mat-label>
+                        <mat-select>
+                            <mat-option value="female">Female</mat-option>
+                            <mat-option value="male">Male</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill" class="example-form-field region1">
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="datepicker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #datepicker>
+                          <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                          </mat-datepicker-actions>
+                        </mat-datepicker>
+                      </mat-form-field>
+                    <mat-form-field appearance="fill" class="mt20 w100 countries">
+                        <mat-label >Nationality</mat-label>
+                        <mat-select  name="category" class="country" >
+                          <mat-option *ngFor="let c  of countries" [value]="c.name" >
+                                {{c.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill" class="mt20 w100 countries">
+                        <mat-label >civility</mat-label>
+                        <mat-select>
+                            <mat-option value="mr">Mr</mat-option>
+                            <mat-option value="mrs">Mrs</mat-option>
+                            <mat-option value="miss">Miss</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                      <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Place of birth</mat-label>
+                        <input required  [(ngModel)]="nageur.lieu_naissance" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Responsable</mat-label>
+                        <input required  [(ngModel)]="nageur.responsable" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Adress</mat-label>
+                        <input required  [(ngModel)]="nageur.adresse" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Supplement adress</mat-label>
+                        <input required  [(ngModel)]="nageur.supplement_adresse" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>ZIP</mat-label>
+                        <input required  [(ngModel)]="nageur.zip" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Localite</mat-label>
+                        <input required  [(ngModel)]="nageur.local" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Telephone</mat-label>
+                        <input required  [(ngModel)]="nageur.telephone" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Fax</mat-label>
+                        <input required  [(ngModel)]="nageur.fax" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <br>
+                    
+                    <button mat-raised-button class="clear "  routerLink="/admin/filterCompetitor">Close</button>
+ 
+            </div></mat-tab>
+
+            <mat-tab label="Type/Activities" > 
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+                name="sportive"
+                [(ngModel)]="nageur.sportive"
+                color="admin-color"
+                class=" container1"
+                [checked]="false"
+                type="checkbox"
+                disabled
+               >
+               Sportive
+            </mat-slide-toggle>
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+                name="synchro"
+                [(ngModel)]="nageur.synchro"
+                color="admin-color"
+                class=" container1"
+                [checked]="false"
+                type="checkbox"
+                disabled
+               >
+               Synchro
+            </mat-slide-toggle>
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+            name="water_polo"
+            [(ngModel)]="nageur.water_polo"
+            color="admin-color"
+            class=" container1"
+            [checked]="false"
+            type="checkbox"
+            disabled
+           >
+           Water Polo
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle
+        #checkboxes
+        name="plongeon"
+        [(ngModel)]="nageur.plongeon"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        disabled
+        >
+        Plongeon
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle
+        #checkboxes
+        name="eau_libre"
+        [(ngModel)]="nageur.eau_libre"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        disabled
+        >
+        Eau Libre
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle 
+        #checkboxes
+        name="dirigeant"
+        [(ngModel)]="nageur.dirigeant"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        id="1"
+        disabled
+       >
+       Dirigeant
+    </mat-slide-toggle>
+  
+    <mat-slide-toggle
+        #checkboxes
+        name="maitre"
+        [(ngModel)]="nageur.maitre"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        disabled
+        >
+        maitre
+        </mat-slide-toggle>
+        <button mat-raised-button class="clear clear1" routerLink="/admin/filterCompetitor">Close</button>
+    </mat-tab>
+            <mat-tab label="Licence">
+                <div class="col-md-10 offset-md-1 c1" >
+                <mat-form-field class="w100  region1"  appearance="fill">
+                
+                <mat-label>Federation</mat-label>
+                <input required  [(ngModel)]="nageur.federation" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+            </mat-form-field>
+            <mat-form-field class="w100  region1" appearance="fill">
+                <mat-label>Club</mat-label>
+                <input required  [(ngModel)]="nageur.club" type="text" name="title"  placeholder="Enter here" matInput id=""/>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-form-field region1">
+                <mat-label>Oblitération</mat-label>
+                <input matInput [matDatepicker]="datepicker2">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker2>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field>
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>Licence <code></code></mat-label>
+                <input type="text" name="title"  placeholder="Enter here" matInput id=""/>
+            </mat-form-field>
+            <mat-form-field class="w100 region1 " appearance="fill">
+                <mat-label>Licence's type</mat-label>
+                <mat-select>
+                    <mat-option value="federal">federal</mat-option>
+                    
+                  </mat-select>
+            </mat-form-field>
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>Licence's type</mat-label>
+                <mat-select>
+                    <mat-option value="federal">federal</mat-option>
+                    <mat-option value="corporative">corporative</mat-option>
+                  </mat-select>
+            </mat-form-field>
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>Licence's type</mat-label>
+                <mat-select>
+                    <mat-option value="new">new</mat-option>
+                    <mat-option value="renew">renew</mat-option>
+                    <mat-option value="transfert">transfert</mat-option>
+                  </mat-select>
+            </mat-form-field>
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>Licence's type</mat-label>
+                <mat-select>
+                    <mat-option value="normal">normal</mat-option>
+                    <mat-option value="summer">summer</mat-option>
+                   
+                  </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-form-field region1">
+                <mat-label>Deposite</mat-label>
+                <input matInput [matDatepicker]="datepicker1">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="datepicker1"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker1>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field>
+            <!-- <mat-form-field appearance="fill" class="example-form-field region1">
+                <mat-label>deposite</mat-label>
+                <input matInput [matDatepicker]="datepicker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field> -->
+            
+            
+            <button mat-raised-button class="clear clear2" routerLink="/admin/filterCompetitor">Close</button>
+        </div>
+        </mat-tab>
+          </mat-tab-group>
+         
+
+    <br>
+    </div>
+</mat-card>
+
