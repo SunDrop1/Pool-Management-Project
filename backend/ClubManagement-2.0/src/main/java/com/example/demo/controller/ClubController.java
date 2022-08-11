@@ -57,9 +57,9 @@ public class ClubController {
 		}
 		
 	//Get all clubs
-	@GetMapping("/clubs/")
-	public List<Club> getAlClubs(){
-		return this.clubService.getAllClubs();
+	@GetMapping("/clubs/{activity}")
+	public List<Club> getAlClubs(@PathVariable("activity") boolean activty){
+		return this.clubService.getAllClubs(activty);
 	}
 		
 	

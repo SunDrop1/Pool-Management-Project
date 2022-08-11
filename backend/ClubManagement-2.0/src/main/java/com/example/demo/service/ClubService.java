@@ -46,8 +46,8 @@ public class ClubService {
 			return "club " + id + "was not found";
 		}
 		
-		public List<Club> getAllClubs(){
-			return this.clubRepository.findAll();
+		public List<Club> getAllClubs(boolean activity){
+			return this.clubRepository.findAll(activity);
 		}
 		
 	

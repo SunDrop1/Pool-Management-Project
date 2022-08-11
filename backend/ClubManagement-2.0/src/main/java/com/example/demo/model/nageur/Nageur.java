@@ -64,8 +64,19 @@ public class Nageur {
     @JsonFormat(pattern="MM-dd-yyyy")
 	private Date derniere_visite;
 	private String observation;	
+	private boolean disabeled=false;
 	
 	
+	
+	
+	public boolean isDisabeled() {
+		return disabeled;
+	}
+
+	public void setDisabeled(boolean disabeled) {
+		this.disabeled = disabeled;
+	}
+
 	public Long getId() {
 		return id;
 	}

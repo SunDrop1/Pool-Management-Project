@@ -13,11 +13,13 @@ import lombok.Setter;
 public class Club {
 	
 	
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String countries;
     private String inter_region;
+    private boolean disabeled = false;
     public Long getId() {
 		return id;
 	}
@@ -176,6 +178,14 @@ public class Club {
 
 	public void setFax(String fax) {
 		this.fax = fax;
+	}
+
+	public boolean isDisabeled() {
+		return disabeled;
+	}
+
+	public void setDisabeled(boolean disabeled) {
+		this.disabeled = disabeled;
 	}
 
 	private String region;
