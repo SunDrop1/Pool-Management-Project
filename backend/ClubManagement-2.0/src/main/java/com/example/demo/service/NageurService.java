@@ -105,6 +105,11 @@ public class NageurService {
 		}
 		
 		
+		// get nageur by club
+		public List<Nageur> getNageurByClub(String club){
+			return this.nageurRepository.findNageurByClub(club);
+		}
+		
 		
 }
 		

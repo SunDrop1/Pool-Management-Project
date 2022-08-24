@@ -73,4 +73,11 @@ public class NageurController {
 			return nageurService.getNageurByLicense(license);
 		}
 		
+		//Get nageur by club
+		@GetMapping("/get_club/{club}")
+		public List<Nageur> getNageurByClub(@PathVariable("club") String club) {
+			return nageurService.getNageurByClub(club);
+		}
+		
+		
 }

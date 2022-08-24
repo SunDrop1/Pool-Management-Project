@@ -55,6 +55,9 @@ import { EditNageurComponent } from './pages/admin/edit-nageur/edit-nageur.compo
 import { FilterNageurComponent } from './pages/admin/filter-nageur/filter-nageur.component';
 import { NageurDetailFormComponent } from './pages/admin/nageur-detail-form/nageur-detail-form.component';
 import { ViewNageurComponent } from './pages/admin/view-nageur/view-nageur.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -115,6 +118,8 @@ import { ViewNageurComponent } from './pages/admin/view-nageur/view-nageur.compo
     NgxUiLoaderModule,
     MatTabsModule,
     NgxPaginationModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     NgxUiLoaderHttpModule.forRoot({
       showForeground: true,
     })

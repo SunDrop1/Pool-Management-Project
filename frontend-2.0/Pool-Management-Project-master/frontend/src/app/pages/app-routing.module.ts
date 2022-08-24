@@ -19,6 +19,12 @@ import { LookForClubComponent } from './admin/look-for-club/look-for-club.compon
 import { EditClubComponent } from './admin/edit-club/edit-club.component';
 import { EditClubFormComponent } from './admin/edit-club-form/edit-club-form.component';
 import { ViewdetailformComponent } from './admin/viewdetailform/viewdetailform.component';
+import { AddNageurComponent } from './admin/add-nageur/add-nageur.component';
+import { FilterNageurComponent } from './admin/filter-nageur/filter-nageur.component';
+import { NageurDetailFormComponent } from './admin/nageur-detail-form/nageur-detail-form.component';
+import { EditNageurComponent } from './admin/edit-nageur/edit-nageur.component';
+import { EditNageurFormComponent } from './admin/edit-nageur-form/edit-nageur-form.component';
+import { ViewNageurComponent } from './admin/view-nageur/view-nageur.component';
 
 const routes: Routes = [
  {
@@ -44,6 +50,7 @@ const routes: Routes = [
          path:'home',
          component: WelcomeComponent,
       },
+       /*ACCOUNT*/
       {
          path:'ViewAccount',
          component: ViewAccountComponent,
@@ -64,6 +71,7 @@ const routes: Routes = [
          path:'editAccountForm/:id',
          component: EditAccountFormComponent,
       },
+      /*CLUB*/
       {
          path:'addClub',
          component: AddClubComponent,
@@ -88,7 +96,30 @@ const routes: Routes = [
          path:'ClubDetails/:id',
          component:ViewdetailformComponent,
         },
-      
+        {
+         path:'addCompetitor',
+         component: AddNageurComponent,
+        },
+        {
+         path:'viewCompetitor',
+         component: ViewNageurComponent,
+        },
+        {
+         path:'filterCompetitor',
+         component:FilterNageurComponent,
+        },
+        {
+         path:'CompetitorDetails',
+         component:NageurDetailFormComponent,
+        },
+        {
+         path:'editCompetitor',
+         component:EditNageurComponent,
+        },
+        {
+         path:'editCompetitorForm',
+         component:EditNageurFormComponent,
+        },
       
     ],
  }, 

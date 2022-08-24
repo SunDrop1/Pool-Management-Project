@@ -25,5 +25,9 @@ public interface NageurRepository extends JpaRepository<Nageur,Long>{
 			@Query(value = "SELECT * FROM nageur WHERE  disabeled= ?1" , nativeQuery = true)
 			List<Nageur> findAll(boolean disabeled);
 			
+			@Query(value = "SELECT * FROM nageur WHERE club = ?1 " , nativeQuery = true)
+			List<Nageur> findNageurByClub(String club);
+			
+			
 
 }

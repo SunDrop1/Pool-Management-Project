@@ -1,1 +1,264 @@
-<p>add-nageur works!</p>
+lines (264 sloc)  12.8 KB
+
+<mat-card class="container">
+    <h1>Add New Competitor</h1>
+    <div class="row">
+        <form (ngSubmit)="formSubmit()">
+          <mat-tab-group> 
+            <mat-tab label="Nageur"> 
+                <div class="col-md-10 offset-md-1">
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Nom</mat-label>
+                        <input required  [(ngModel)]="nageur.nom" type="text" name="nom"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Prenom</mat-label>
+                        <input required  [(ngModel)]="nageur.prenom" type="text" name="prenom"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="mt20 w100 countries">
+                        <mat-label >Sexe</mat-label>
+                        <mat-select name="sexe" [(ngModel)]="nageur.sexe">
+                            <mat-option value="female">Female</mat-option>
+                            <mat-option value="male">Male</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill" class="example-form-field region1">
+                        <mat-label>Choose a date</mat-label>
+                        <input name="dateNaissance" [(ngModel)]="nageur.dateNaissance" matInput [matDatepicker]="datepicker" >
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #datepicker>
+                          <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                          </mat-datepicker-actions>
+                        </mat-datepicker>
+                      </mat-form-field>
+                    <mat-form-field appearance="fill" class="mt20 w100 countries">
+                        <mat-label >Nationality</mat-label>
+                        <mat-select  name="nationalite" [(ngModel)]="nageur.nationalite" class="country" >
+                          <mat-option *ngFor="let c  of countries" [value]="c.name" >
+                                {{c.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <mat-form-field appearance="fill" class="mt20 w100 countries">
+                        <mat-label >civility</mat-label>
+                        <mat-select name="civilite" [(ngModel)]="nageur.civilite">
+                            <mat-option value="mr">Mr</mat-option>
+                            <mat-option value="mrs">Mrs</mat-option>
+                            <mat-option value="miss">Miss</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                      <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Place of birth</mat-label>
+                        <input required  [(ngModel)]="nageur.lieu_naissance" type="text" name="lieu_naissance"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Responsable</mat-label>
+                        <input required  [(ngModel)]="nageur.responsable" type="text" name="responsable" placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Adress</mat-label>
+                        <input required  [(ngModel)]="nageur.adresse" type="text" name="adresse"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Supplement adress</mat-label>
+                        <input required  [(ngModel)]="nageur.supplement_adresse" type="text" name="supplement_adresse"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>ZIP</mat-label>
+                        <input required  [(ngModel)]="nageur.zip" type="text" name="zip"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Localite</mat-label>
+                        <input required  [(ngModel)]="nageur.local" type="text" name="local"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Telephone</mat-label>
+                        <input required  [(ngModel)]="nageur.telephone" type="text" name="telephone" placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <mat-form-field class="w100 region1" appearance="fill">
+                        
+                        <mat-label>Fax</mat-label>
+                        <input required  [(ngModel)]="nageur.fax" type="text" name="fax"  placeholder="Enter here" matInput id=""/>
+                    </mat-form-field>
+                    <br>
+                    <button mat-raised-button class=" add" >Add</button>
+                    <button mat-raised-button class="clear " (click)="clear1()">Clear</button>
+ 
+            </div></mat-tab>
+
+            <mat-tab label="Type/Activities" > 
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+                name="sportive"
+                [(ngModel)]="nageur.sportive"
+                color="admin-color"
+                class=" container1"
+                [checked]="false"
+                type="checkbox"
+                (click)="clear22()"
+               >
+               Sportive
+            </mat-slide-toggle>
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+                name="synchro"
+                [(ngModel)]="nageur.synchro"
+                color="admin-color"
+                class=" container1"
+                [checked]="false"
+                type="checkbox"
+                (click)="clear23()"
+               >
+               Synchro
+            </mat-slide-toggle>
+            &nbsp;
+            <mat-slide-toggle
+            #checkboxes
+            name="water_polo"
+            [(ngModel)]="nageur.water_polo"
+            color="admin-color"
+            class=" container1"
+            [checked]="false"
+            type="checkbox"
+            (click)="clear24()"
+           >
+           Water Polo
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle
+        #checkboxes
+        name="plongeon"
+        [(ngModel)]="nageur.plongeon"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        (click)="clear25()"
+        >
+        Plongeon
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle
+        #checkboxes
+        name="eau_libre"
+        [(ngModel)]="nageur.eau_libre"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        (click)="clear26()"
+        >
+        Eau Libre
+        </mat-slide-toggle>
+        &nbsp;
+        <mat-slide-toggle 
+        #checkboxes
+        name="dirigeant"
+        [(ngModel)]="nageur.dirigeant"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        id="1"
+        (click)="clear27()"
+       >
+       Dirigeant
+    </mat-slide-toggle>
+  
+    <mat-slide-toggle
+        #checkboxes
+        name="maitre"
+        [(ngModel)]="nageur.maitre"
+        color="admin-color"
+        class=" container1"
+        [checked]="false"
+        type="checkbox"
+        (click)="clear28()"
+        >
+        maitre
+        </mat-slide-toggle>
+        <button mat-raised-button class="clear clear1" (click)="clear2()">Clear</button>
+    </mat-tab>
+            <mat-tab label="Licence">
+                <div class="col-md-10 offset-md-1 c1" >
+                <mat-form-field class="w100  region1"  appearance="fill">
+                
+                <mat-label>Federation</mat-label>
+                <input required  [(ngModel)]="nageur.federation" type="text" name="federation"  placeholder="Enter here" matInput id=""/>
+            </mat-form-field>
+            <mat-form-field class="w100  region1" appearance="fill">
+                <mat-label>Club</mat-label>
+                <input required  [(ngModel)]="nageur.club" type="text" name="club"  placeholder="Enter here" matInput id=""/>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-form-field region1">
+                <mat-label>Oblitération</mat-label>
+                <input   [(ngModel)]="nageur.obliteration" matInput [matDatepicker]="datepicker2">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker2>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field>
+
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>Licence's type</mat-label>
+                <mat-select name="type_licence1"  [(ngModel)]="nageur.type_licence1">
+                    <mat-option value="federal">federal</mat-option>
+                    <mat-option value="corporative">corporative</mat-option>
+                  </mat-select>
+            </mat-form-field>
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>Licence's type</mat-label>
+                <mat-select name="type_licence2"  [(ngModel)]="nageur.type_licence2">
+                    <mat-option value="new">new</mat-option>
+                    <mat-option value="renew">renew</mat-option>
+                    <mat-option value="transfert">transfert</mat-option>
+                  </mat-select>
+            </mat-form-field>
+            <mat-form-field class="w100 region1" appearance="fill">
+                <mat-label>Licence's type</mat-label>
+                <mat-select name="type_licence3"  [(ngModel)]="nageur.type_licence3">
+                    <mat-option value="normal">normal</mat-option>
+                    <mat-option value="summer">summer</mat-option>
+                   
+                  </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="example-form-field region1">
+                <mat-label>Deposite</mat-label>
+                <input name="depot"  [(ngModel)]="nageur.depot" matInput [matDatepicker]="datepicker1">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="datepicker1"></mat-datepicker-toggle>
+                <mat-datepicker #datepicker1>
+                  <mat-datepicker-actions>
+                    <button mat-button matDatepickerCancel>Cancel</button>
+                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                  </mat-datepicker-actions>
+                </mat-datepicker>
+              </mat-form-field>            
+            <button mat-raised-button class="clear clear2" (click)="clear3()">Clear</button>
+        </div>
+        </mat-tab>
+          </mat-tab-group>
+        </form>
+    <br>
+    </div>
+</mat-card>
+

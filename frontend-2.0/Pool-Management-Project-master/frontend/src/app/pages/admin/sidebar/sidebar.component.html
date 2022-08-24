@@ -1,5 +1,6 @@
 <mat-card class="sidebar">
 	<mat-action-list>
+		<!-- MAIN MENU -->
 		<div mat-subheader>Menu</div>
 		<button  routerLink="/admin/home" (click)="test=0;" mat-list-item><mat-icon mat-list-icon>home</mat-icon>Home</button>
 		<button *ngIf="test==0" mat-list-item routerLink="/admin/profile">
@@ -10,7 +11,7 @@
 			<mat-icon mat-list-icon>list</mat-icon>
 			Accounts
 		</button>
-		<button *ngIf="test==0" mat-list-item routerLink="/admin/quizzes">
+		<button *ngIf="test==0" (click)="test=3;" mat-list-item routerLink="/admin/quizzes">
 			<mat-icon mat-list-icon>pool</mat-icon>
 			Competitors
 		</button>
@@ -27,6 +28,7 @@
 			<mat-icon mat-list-icon>logout</mat-icon>
 			Logout
 		</button>
+		<!-- ACCOUNT MENU -->
 		<button *ngIf="test==1" mat-list-item routerLink="/admin/ViewAccount">
 			<mat-icon mat-list-icon>account_circle</mat-icon>
 			View Accounts
@@ -43,7 +45,7 @@
 			<mat-icon mat-list-icon>edit</mat-icon>
 			Edit Accounts
 		</button>
-		
+		<!-- CLUB MENU -->
 		<button *ngIf="test==2" mat-list-item routerLink="/admin/viewClub">
 			<mat-icon mat-list-icon>account_circle</mat-icon>
 			View Club
@@ -59,6 +61,23 @@
         <button *ngIf="test==2" mat-list-item routerLink="/admin/editClub">
 			<mat-icon mat-list-icon>edit</mat-icon>
 			Edit Club
+		</button>
+		<!-- COMPETITOR MENU -->
+		<button *ngIf="test==3" mat-list-item routerLink="/admin/viewCompetitor">
+			<mat-icon mat-list-icon>account_circle</mat-icon>
+			View competitors
+		</button>
+		<button *ngIf="test==3" mat-list-item  routerLink="/admin/addCompetitor">
+			<mat-icon mat-list-icon>add_circle</mat-icon>
+			Add competitor
+		</button>
+		<button *ngIf="test==3" mat-list-item routerLink="/admin/filterCompetitor">
+			<mat-icon mat-list-icon>filter_alt</mat-icon>
+			Look for competitor
+		</button>
+        <button *ngIf="test==3" mat-list-item routerLink="/admin/editCompetitor">
+			<mat-icon mat-list-icon>edit</mat-icon>
+			Edit competitor
 		</button>
 	</mat-action-list>
   </mat-card>
